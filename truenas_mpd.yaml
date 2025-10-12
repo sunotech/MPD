@@ -1,0 +1,14 @@
+services:
+  mpd:
+    container_name: mpd
+    image: tobi312/rpi-mpd:alpine
+    ports:
+      - '6600:6600'
+      - '8000:8000'
+    restart: unless-stopped
+    volumes:
+      - /mnt/[dataset]/music/:/var/lib/mpd/music:rw
+      - /mnt/[dataset]/mpd/playlists:/var/lib/mpd/playlists:rw
+      - /mnt/[dataset]/mpd/data:/var/lib/mpd/data:rw
+      - /mnt/[dataset]/mpd/truenas_mpd.conf:/etc/mpd.conf:ro
+version: '2.4'
