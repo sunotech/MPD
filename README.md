@@ -6,3 +6,5 @@ I have been using MPD on various machines and OSs over the years. This space ser
 
 # Use-case
 NAS + laptop
+
+MPD is a server client model already, the setup is primarily put a "heavey" server that host all music files and connects to audio output. However, this set up is less flexible for people who don't have a fixed listening area. The set up I have right now is to set up multiple MPDs where the client version of MPD get a golden source of music library from the "master" MPD server.
